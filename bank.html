@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Bank Assignment</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff0f0;
+      color: #333;
+    }
+
+    header {
+      background: #c1121f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      flex: 1 1 250px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 15px;
+      background: #c1121f;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #800000;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      text-align: center;
+      background: #c1121f;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blood Bank Management</h1>
+    <p>Donate Blood, Save Lives ❤️</p>
+  </header>
+
+  <div class="container">
+    <h2 style="text-align:center;">Blood Groups Available</h2>
+    <div class="info">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/651/651191.png" alt="Blood Drop">
+        <h3>A+</h3>
+        <p>Available Units: 35</p>
+        <a href="#" class="btn">Request</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/651/651191.png" alt="Blood Drop">
+        <h3>B+</h3>
+        <p>Available Units: 20</p>
+        <a href="#" class="btn">Request</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/651/651191.png" alt="Blood Drop">
+        <h3>O+</h3>
+        <p>Available Units: 42</p>
+        <a href="#" class="btn">Request</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/651/651191.png" alt="Blood Drop">
+        <h3>AB+</h3>
+        <p>Available Units: 15</p>
+        <a href="#" class="btn">Request</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Blood Bank Project | Designed with ❤️</p>
+  </footer>
+</body>
+</html>

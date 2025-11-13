@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sunny Bajwa — Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bg:#0f172a;
+            --card:#0b1220;
+            --muted:#94a3b8;
+            --accent:#06b6d4;
+            --accent-2:#7c5cff;
+            --white:#e6eefc;
+            --glass:rgba(255,255,255,0.04);
+            --radius:14px;
+        }
+
+        *{box-sizing:border-box;margin:0;padding:0}
+        html,body{height:100%}
+        body{
+            font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: radial-gradient(1200px 600px at 10% 10%, rgba(124,92,255,0.12), transparent 10%),
+                        radial-gradient(1000px 500px at 90% 90%, rgba(6,182,212,0.08), transparent 10%),
+                        var(--bg);
+            color:var(--white);
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            line-height:1.45;
+            padding:28px;
+        }
+
+        /* Container */
+        .wrap{
+            max-width:1100px;
+            margin:24px auto;
+            display:grid;
+            grid-template-columns: 320px 1fr;
+            gap:22px;
+            align-items:start;
+        }
+
+        /* Sidebar / Profile card */
+        .profile{
+            background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            border-radius:var(--radius);
+            padding:22px;
+            box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+            border:1px solid rgba(255,255,255,0.04);
+            position:sticky;
+            top:28px;
+        }
+        .avatar{
+            width:120px;height:120px;border-radius:18px;display:block;margin:0 auto 14px auto;object-fit:cover;border:3px solid rgba(255,255,255,0.06);
+        }
+        .logo-monogram{
+            width:64px;height:64px;border-radius:12px;margin:0 auto 12px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:grid;place-items:center;font-weight:700;color:#fff;font-family:Inter,Segoe UI,sans-serif;
+        }
+        .name{ text-align:center;margin-bottom:6px;font-size:1.15rem;font-weight:700;color:var(--white) }
+        .role{ text-align:center;color:var(--muted);font-size:.9rem;margin-bottom:14px }
+        .profile p{ color:var(--muted); font-size:0.95rem; margin-bottom:12px; text-align:center }
+
+        .contact-list{ display:flex;flex-direction:column;gap:8px;margin-top:8px }
+        .contact-item{ display:flex;align-items:center;gap:10px;color:var(--muted);font-weight:600;text-decoration:none}
+        .contact-item svg{opacity:0.95}
+
+        .nav-pills{ display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px }
+        .pill{ background:var(--glass); color:var(--white); padding:8px 12px;border-radius:999px;font-weight:600;font-size:0.9rem;border:1px solid rgba(255,255,255,0.03); cursor:pointer }
+        .pill:hover{ transform:translateY(-3px); box-shadow:0 10px 30px rgba(2,6,23,0.6) }
+
+        /* Main content */
+        main{
+            display:flex;
+            flex-direction:column;
+            gap:18px;
+        }
+
+        .card{
+            background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            border-radius:var(--radius);
+            padding:20px;
+            box-shadow: 0 8px 30px rgba(2,6,23,0.5);
+            border:1px solid rgba(255,255,255,0.03);
+        }
+
+        .welcome{
+            display:flex;align-items:center;justify-content:space-between;gap:12px;
+        }
+        .welcome h1{ font-size:1.35rem;color:var(--white);margin:0 }
+        .welcome small{ color:var(--muted) }
+
+        h2{ color:var(--accent); margin:0 0 10px 0 }
+        p{ color:var(--muted); margin:0 0 12px 0 }
+
+        .projects-grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:12px }
+        .project{
+            padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.02);
+        }
+        .project h3{ font-size:1rem;margin-bottom:6px;color:var(--white) }
+        .project p{ font-size:0.92rem;color:var(--muted) }
+
+        .img-thumb{ width:100%; height:140px; object-fit:cover;border-radius:10px;margin-top:10px; display:block }
+
+        .courses ul{ padding-left:18px; color:var(--muted) }
+        .courses li{ margin-bottom:8px }
+
+        /* Contact form */
+        .contact-form input, .contact-form textarea{
+            background: rgba(255,255,255,0.02);
+            border:1px solid rgba(255,255,255,0.04);
+            color:var(--white);
+            padding:10px;border-radius:10px; width:100%; outline:none;
+        }
+        .contact-actions{ display:flex; gap:10px; margin-top:8px; flex-wrap:wrap }
+        .btn{
+            background:linear-gradient(90deg,var(--accent-2),var(--accent));
+            color:#fff; padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700;
+        }
+        .btn.secondary{ background:transparent;border:1px solid rgba(255,255,255,0.06); color:var(--white) }
+
+        footer{ text-align:center;color:var(--muted); margin-top:18px;font-size:0.9rem }
+
+        /* Responsive */
+        @media (max-width:960px){
+            .wrap{ grid-template-columns: 1fr; padding:0 12px }
+            .profile{ position:relative; top:0; display:flex; gap:12px; align-items:center; padding:14px }
+            .avatar{ margin:0; width:80px;height:80px;border-radius:12px }
+            .logo-monogram{ width:48px;height:48px;border-radius:10px }
+            .name{ text-align:left }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <aside class="profile card">
+            <img src="Screenshot (2).png" alt="Sunny Bajwa" class="avatar">
+            <div class="logo-monogram" aria-hidden="true">SB</div>
+            <div class="name">Sunny Bajwa</div>
+            <div class="role">Web Developer • Learner</div>
+            <p>Punjab, India — building simple, usable web apps. Passionate about frontend and small ML experiments.</p>
+
+            <div class="contact-list" aria-label="Contact">
+                <a class="contact-item" href="tel:+919034210670"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12 1.05.37 2.07.73 3.03a2 2 0 0 1-.45 2.11L8.91 10.91a16 16 0 0 0 6 6l1.05-1.05a2 2 0 0 1 2.11-.45c.96.36 1.98.61 3.03.73A2 2 0 0 1 22 16.92z" fill="currentColor"/></svg> +91-9034210670</a>
+                <a class="contact-item" href="mailto:radhaswamiyt@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg> radhaswamiyt@gmail.com</a>
+                <a class="contact-item" href="https://instagram.com/iam_sunny071" target="_blank" rel="noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5zM18.5 6a.75.75 0 1 1-.75-.75A.75.75 0 0 1 18.5 6z" fill="currentColor"/></svg> @iam_sunny071</a>
+            </div>
+
+            <div class="nav-pills" role="navigation" aria-label="Main">
+                <div class="pill">Home</div>
+                <div class="pill">About</div>
+                <div class="pill">Skills</div>
+                <div class="pill">Contact</div>
+            </div>
+        </aside>
+
+        <main>
+            <section class="card welcome">
+                <div>
+                    <h1>Hello — I'm Sunny</h1>
+                    <small>Frontend developer focused on clean UI & simple UX</small>
+                </div>
+                <div style="text-align:right">
+                    <div style="font-size:0.85rem;color:var(--muted)">Available for freelance</div>
+                    <a href="tel:+919034210670" class="btn" style="margin-top:8px;display:inline-block">Call</a>
+                </div>
+            </section>
+
+            <section class="card about-me">
+                <h2>About Me</h2>
+                <p>Hello! I'm Sunny Bajwa — I build web apps, learn new tech, and share projects here. I love clean interfaces, responsive layouts and small automation tools.</p>
+            </section>
+
+            <section class="card projects">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project">
+                        <h3><a href="blood.html" target="_blank" style="color:var(--white);text-decoration:none">Blood Donation Management System</a></h3>
+                        <p>A web app to manage donors and requests.</p>
+                        <img src="bloodbank.jpg" alt="" class="img-thumb">
+                    </div>
+
+                    <div class="project">
+                        <h3>AI Chatbot System</h3>
+                        <p>Chatbot using NLP for answering queries.</p>
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg" alt="" class="img-thumb" style="background:#0b1220;padding:12px;">
+                    </div>
+
+                    <div class="project">
+                        <h3>GPS Tracking System</h3>
+                        <p>Real-time location tracking with route history.</p>
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlemaps.svg" alt="" class="img-thumb" style="background:#0b1220;padding:12px;">
+                    </div>
+                </div>
+            </section>
+
+            <section class="card courses">
+                <h2>Courses</h2>
+                <ul>
+                    <li><strong>MS Word:</strong> document formatting, mail merge.</li>
+                    <li><strong>HTML:</strong> semantic markup, forms, multimedia.</li>
+                    <li><strong>CSS:</strong> responsive layouts, animations.</li>
+                </ul>
+            </section>
+
+            <section class="card contact-form" id="contact">
+                <h2>Contact Me</h2>
+                <form id="contactForm">
+                    <label style="display:block;font-weight:600;margin-bottom:6px">Name</label>
+                    <input id="name" name="name" type="text" required>
+                    <label style="display:block;font-weight:600;margin-bottom:6px">Email</label>
+                    <input id="email" name="email" type="email" required>
+                    <label style="display:block;font-weight:600;margin-bottom:6px">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <div class="contact-actions">
+                        <button type="submit" class="btn">Send via WhatsApp</button>
+                        <button type="button" id="sendEmailBtn" class="btn secondary">Send via Email</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card location">
+                <h2>Location — Ambala, Haryana</h2>
+                <p style="color:var(--muted); margin-bottom:12px;">Map showing Ambala, Haryana. Click to open in Google Maps.</p>
+                <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);">
+                    <iframe
+                        src="https://www.google.com/maps?q=Ambala%2C%20Haryana&hl=en&z=13&output=embed"
+                        width="100%" height="320" style="border:0;display:block;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p style="margin-top:10px;">
+                    <a href="https://maps.app.goo.gl/W32BnFYkbhXqcaSC6" target="_blank" rel="noopener noreferrer" class="btn secondary" style="text-decoration:none;display:inline-block;">
+                        Open in Google Maps
+                    </a>
+                </p>
+            </section>
+            
+            <footer>© <strong>Sunny Bajwa</strong> — Built with care</footer>
+        </main>
+    </div>
+
+    <script>
+        (function(){
+            const contactForm = document.getElementById('contactForm');
+            const sendEmailBtn = document.getElementById('sendEmailBtn');
+            const whatsappNumber = '919034210670';
+            const emailTo = 'sunnybajwa@email.com';
+
+            contactForm.addEventListener('submit', function(e){
+                e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if(!name || !email || !message){
+                    alert('Please fill all fields.');
+                    return;
+                }
+
+                const text = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+                const waUrl = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(text);
+                window.open(waUrl, '_blank');
+            });
+
+            sendEmailBtn.addEventListener('click', function(){
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                if(!name || !email || !message){
+                    alert('Please fill all fields before sending email.');
+                    return;
+                }
+                const subject = encodeURIComponent('Message from portfolio website');
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+                location.href = `mailto:${emailTo}?subject=${subject}&body=${body}`;
+            });
+        })();
+    </script>
+</body>
+</html>

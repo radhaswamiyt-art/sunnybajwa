@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloodLink - Online Blood Bank</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-tint"></i>
+                <span>BloodLink</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#donate">Donate</a>
+                <a href="#request">Request</a>
+                <a href="#banks">Blood Banks</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Save Lives, Donate Blood</h1>
+            <p>Connect donors with those in need. Every drop counts in the fight for life.</p>
+            <div class="hero-buttons">
+                <a href="#donate" class="btn btn-primary">Become a Donor</a>
+                <a href="#request" class="btn btn-secondary">Request Blood</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="data:image/jpeg;base64,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" alt="Blood donation">
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <h3>10,000+</h3>
+                <p>Registered Donors</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-heart"></i>
+                <h3>50,000+</h3>
+                <p>Lives Saved</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-hospital"></i>
+                <h3>200+</h3>
+                <p>Partner Blood Banks</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <h3>24/7</h3>
+                <p>Emergency Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About BloodLink</h2>
+                <p>BloodLink is a revolutionary online platform that bridges the gap between blood donors and recipients. Our mission is to ensure that every person in need of blood gets it in time, while making the donation process seamless and rewarding for donors.</p>
+                <p>We partner with certified blood banks across the country to maintain the highest standards of safety and quality. Every donation goes through rigorous screening and testing to ensure it's safe for transfusion.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Safe & Secure</h4>
+                        <p>All donations are screened and tested</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <h4>24/7 Availability</h4>
+                        <p>Emergency blood requests anytime</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Nationwide Network</h4>
+                        <p>Connected to blood banks everywhere</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Medical professionals">
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="donate">
+        <div class="container">
+            <h2>Become a Blood Donor</h2>
+            <p>Join our community of life-savers. Your donation can save up to 3 lives.</p>
+            <div class="donate-grid">
+                <div class="donate-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Eligibility Check</h3>
+                    <p>Quick online assessment to see if you're eligible to donate</p>
+                    <button class="btn btn-outline" onclick="checkEligibility()">Check Eligibility</button>
+                </div>
+                <div class="donate-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Schedule Donation</h3>
+                    <p>Find nearby blood banks and book your appointment</p>
+                    <button class="btn btn-outline" onclick="scheduleDonation()">Schedule Now</button>
+                </div>
+                <div class="donate-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>Donor Rewards</h3>
+                    <p>Earn points and certificates for your generous contributions</p>
+                    <button class="btn btn-outline" onclick="viewRewards()">View Rewards</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Section -->
+    <section id="request" class="request">
+        <div class="container">
+            <h2>Request Blood</h2>
+            <p>In emergency situations, every minute counts. Get the blood you need quickly.</p>
+            <div class="request-form">
+                <form id="bloodRequestForm">
+                    <div class="form-group">
+                        <label for="patientName">Patient Name</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bloodType">Blood Type Needed</label>
+                        <select id="bloodType" required>
+                            <option value="">Select Blood Type</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="units">Units Required</label>
+                        <input type="number" id="units" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hospital">Hospital Name</label>
+                        <input type="text" id="hospital" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="urgency">Urgency Level</label>
+                        <select id="urgency" required>
+                            <option value="normal">Normal</option>
+                            <option value="urgent">Urgent</option>
+                            <option value="critical">Critical</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact Number</label>
+                        <input type="tel" id="contact" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blood Banks Section -->
+    <section id="banks" class="banks">
+        <div class="container">
+            <h2>Partner Blood Banks</h2>
+            <p>Find certified blood banks in your area</p>
+            <div class="banks-grid">
+                <div class="bank-card">
+                    <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Blood Bank">
+                    <h3>City General Hospital</h3>
+                    <p>123 Main Street, Downtown</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <button class="btn btn-outline">View Details</button>
+                </div>
+                <div class="bank-card">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Blood Bank">
+                    <h3>Regional Blood Center</h3>
+                    <p>456 Oak Avenue, Midtown</p>
+                    <p><i class="fas fa-phone"></i> (555) 987-6543</p>
+                    <button class="btn btn-outline">View Details</button>
+                </div>
+                <div class="bank-card">
+                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Blood Bank">
+                    <h3>Metro Blood Bank</h3>
+                    <p>789 Pine Road, Uptown</p>
+                    <p><i class="fas fa-phone"></i> (555) 456-7890</p>
+                    <button class="btn btn-outline">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Emergency Hotline</h4>
+                            <p>1-800-BLOOD-HELP</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Support</h4>
+                            <p>support@bloodlink.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Headquarters</h4>
+                            <p>100 Life Street, Health City, HC 12345</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-tint"></i>
+                        <span>BloodLink</span>
+                    </div>
+                    <p>Connecting donors with those in need, one drop at a time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#donate">Donate Blood</a></li>
+                        <li><a href="#request">Request Blood</a></li>
+                        <li><a href="#banks">Blood Banks</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Blood Types</h4>
+                    <ul>
+                        <li>A+</li>
+                        <li>A-</li>
+                        <li>B+</li>
+                        <li>B-</li>
+                        <li>AB+</li>
+                        <li>AB-</li>
+                        <li>O+</li>
+                        <li>O-</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BloodLink. All rights reserved. | Made with <i class="fas fa-heart"></i> for humanity</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
